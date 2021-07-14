@@ -1,0 +1,69 @@
+.about{
+    padding-top: 160px;
+    @include max(768px){
+        padding: 96px 0px;
+    }
+    .about__container{
+        position: relative;
+        max-width: 1100px;
+        margin: 0 auto;
+        @include max(768px){
+            max-width: 524px;
+        }
+    }
+    .about__image {
+        width: 100%;
+        max-width: 731px;
+    }
+    .about__info{
+        position: absolute;
+        bottom: 4px;
+        right: 0;
+        background: white;
+        padding-top: 96px;
+        padding-left: 96px;
+        text-align: left;
+        max-width: 541px;
+        @include max(768px){
+            position: static;
+            text-align: center;
+            padding-top: 48px;
+            padding-left: 0px;
+        }
+                h2{
+            font-size: 3rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            max-width: 30rem;
+            padding-bottom: 26px;
+            @include max(1080px){
+                font-size: 2.4rem;
+            }
+            @include max(768px){
+                font-size: 1.8rem;
+                max-width: 25rem;
+                margin: auto;
+            }
+            @include max(340px){
+                font-size: 1.7rem;
+            }
+        }
+        p{
+            max-width: 28rem;
+            color: $DarkGray;
+            font-size: 14.5px;
+            letter-spacing: 0.2px;
+            line-height: 1.75;
+            @include max(1080px){
+                margin: auto;
+            }
+            @include max(376px){
+                max-width: 18rem;
+                margin: auto;
+            }
+            @include max(340px){
+                font-size: 13px;
+            }
+        }
+    }
+}   

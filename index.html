@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/app/css/main.css">
+  
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { padding-top: 13px; padding-bottom: 10px; font-size: 10px; text-align: center; text-transform: uppercase; color: darkgray; font-family: 'Josefin Sans', sans-serif;}
+    .attribution a { color: #fff;}
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="overlay"></div>
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="/images/logo.svg" alt="Logo"></a>
+            <div class="navbar__links">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="mobile__menu">
+                 <div class="hamburger"></div>
+            </div>
+        </nav>
+        <div class="headings">
+            <h1>Immersive experiences that deliver</h1>
+        </div>
+    </div>
+    <div class="mobile__links">
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Events</a>
+        <a href="#">Products</a>
+        <a href="#">Support</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="about">
+        <div class="about__container container">
+          <picture class="about__picture">
+            <source media="(min-width: 769px)" srcset="images/desktop/image-interactive.jpg">
+            <img class="about__image" src="images/mobile/image-interactive.jpg" alt="VR headset">
+          </picture>
+          <div class="about__info">
+            <h2>The leader in interactive VR</h2>
+            <p>Founded in 2011, Loopstudios has been producing world-class virtual reality 
+              projects for some of the best companies around the globe. Our award-winning 
+              creations have transformed businesses through digital experiences that bind 
+              to their brand.</p>
+          </div>
+        </div>
+      </section>
+
+       <section class="creations">
+              <div class="container">
+                  <div class="creations__heading">
+                      <h3>Our creations</h3>
+                      <button class="btn btn1">See all</button>
+                  </div> 
+                  <div class="creations__grid  width">
+                      <div class="grid deep-earth">
+                           <h3>Deep Earth</h3>
+                      </div>
+
+                      <div class="grid night-arcade">
+                          <h3>Night arcade</h3>
+                      </div>
+
+                      <div class="grid soccer-team">
+                          <h3>Soccer team VR</h3>
+                      </div>
+
+                      <div class="grid the-grid">
+                          <h3>The grid</h3>
+                      </div>
+
+                      <div class="grid above-vr">
+                          <h3>From up above VR</h3>
+                      </div>
+                      
+                      <div class="grid pocket-borealis">
+                          <h3>Pocket borealis</h3>
+                      </div>
+
+                      <div class="grid the-curiosity">
+                          <h3>The curiosity</h3>
+                      </div>
+
+                      <div class="grid make-fisheye" id="module">
+                          <h3> Make it fisheye</h3>
+                      </div>
+                  </div>
+                  <div class="mobile">
+                    <button class="btn-mobile">See all</button>
+                  </div>
+              </div>
+       </section>
+  </main>
+  <footer class="footer">
+       <div class="container">
+           <div class="footer__nav">
+               <div class="footer__logo">
+                   <a href="#"><img class="logo-foot" src="/images/logo.svg" alt="logo"></a>
+               </div>
+               <div class="footer__social-media">
+                   <ul>
+                       <li> <a href="#"><img src="/images/icon-facebook.svg" alt="facebook"></a></li>
+                       <li><a href="#"><img src="/images/icon-twitter.svg" alt="twitter"></a></li>
+                       <li><a href="#"><img src="/images/icon-pinterest.svg" alt="pinterest"></a></li>
+                       <li><a href="#"><img src="/images/icon-instagram.svg" alt="instagram"></a></li>
+                   </ul>
+               </div>
+           </div>
+           <div class="footer__content">
+              <div class="links">
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Events</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">Support</a></li>
+                </ul>
+              </div>
+              <div class="footer__social-media-mobile">
+                <ul>
+                    <li> <a href="#"><img src="/images/icon-facebook.svg" alt="facebook"></a></li>
+                    <li><a href="#"><img src="/images/icon-twitter.svg" alt="twitter"></a></li>
+                    <li><a href="#"><img src="/images/icon-pinterest.svg" alt="pinterest"></a></li>
+                    <li><a href="#"><img src="/images/icon-instagram.svg" alt="instagram"></a></li>
+                </ul>
+            </div>
+              <div class="copyright">
+                  <p>© 2021 Loopstudios. All rights reserved.</p>
+              </div>  
+           </div>
+       </div>
+       <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/Nik-web12">Nikhil Hingwe</a>.
+      </div> 
+  </footer>
+
+  <script src="/app/js/script.js"></script>
+
+</body>
+</html>

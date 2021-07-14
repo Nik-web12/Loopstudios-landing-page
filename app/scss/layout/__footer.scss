@@ -1,0 +1,162 @@
+.footer{
+    margin-top: 72px;
+    background: $Black;
+    padding-top: 43.5px;
+    &__logo{
+        .logo-foot{
+            width: 75%;
+            padding-left:2px;
+            &:focus{
+                outline: 2px dotted $White;
+                outline-offset: 0.25rem
+            }
+            @include max(768px){
+                width: 65%;
+                padding-left: 0px;
+                margin-left: 40px;
+            }
+        }
+    }
+    &__nav{
+        @include flex(row,center,space-between);
+        @include max(768px){
+            @include flex(column,center,center);
+        }
+        ul{
+            @include flex(row,center,none);
+            padding-right: 1.4px;
+            @include max(768px){
+                display: none;
+            }
+            li{
+                position: relative;
+                &:not(:last-child){
+                    margin-right: 16px;
+                }
+                img{
+                    &:hover{
+                        animation: shake 0.4s ease-in-out;
+                        cursor: pointer;
+                    }
+                }
+                &::after{
+                    content: "";
+                    display: block;
+                    height: 3px;
+                    width: 100%;
+                    background: $White;
+                    position: absolute;
+                    margin-top: 8px;
+                    transform: scale(0);
+                    transition: .3s ease-in-out;
+                }
+                &:hover::after{
+                    transform: scale(1)
+                }
+            }
+        }
+    }
+    &__content{
+        @include flex(row,center,space-between);
+        margin-top: 22.5px;
+        @include max(768px){
+            @include flex(column,center,center);
+            margin-top: 37px;
+        }
+        .links{
+            ul{
+                @include flex(row,center,none);
+                margin-left: 2px;
+                @include max(768px){
+                    @include flex(column,center,center);
+                    margin-left: 0px;
+                }
+                li{
+                    font-family: $Alata;
+                    font-size: 13.8px;
+                    letter-spacing: 0.7px;
+                    &:not(:first-child){
+                        margin-left: 32px;
+                        @include max(768px){
+                            margin-left: 0px;
+                            margin-top: 10px;
+                        }
+                    }
+                    a{
+                        color: $White;
+                        &::after{
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 3px;
+                            background-color: $White;
+                            margin-top: 7px;
+                            transform: scaleX(0);
+                            transition: .3s ease-in-out;   
+                        }
+                        &:hover::after{
+                            width: 100%;
+                            transform: scaleX(1)
+                        }
+                    }
+                }
+            }
+        }
+        .copyright{
+            p{
+                color: $DarkGray;
+                font-size: 15px;
+                cursor: pointer;
+                transition: .4s ease-in-out;
+                &:hover{
+                    color: $White;                 
+                }
+                @include max(340px){
+                    font-size: 12px;
+                }
+            }
+            @include max(768px){
+                margin-bottom: 30px;
+            }        
+        }
+    }
+}
+
+
+.footer__social-media-mobile{      
+ul{
+    @include flex(row,center,none);
+    padding-right: 1.4px;
+    margin-top: 49px;
+    margin-bottom: 17px;
+    @include min(769px){
+        display: none;
+    }
+    li{
+        position: relative;
+        &:not(:last-child){
+            margin-right: 16px;
+        }
+        img{
+            &:hover{
+                animation: shake 0.4s ease-in-out;
+                cursor: pointer;
+            }
+        }
+        &::after{
+            content: "";
+            display: block;
+            height: 3px;
+            width: 100%;
+            background: $White;
+            position: absolute;
+            margin-top: 8px;
+            transform: scale(0);
+            transition: .3s ease-in-out;
+        }
+        &:hover::after{
+            transform: scale(1)
+        }
+    } 
+  }
+}

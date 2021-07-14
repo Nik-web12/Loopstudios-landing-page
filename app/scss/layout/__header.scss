@@ -1,0 +1,125 @@
+.header{
+    background: url(/images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    @include max(768px){
+        background: url(/images/mobile/image-hero.jpg);
+        height: 650px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: black;
+        height: 650px;
+        width: 100%;
+        opacity: 0.4;
+    }
+    .navbar{
+        @include flex(row,center,space-between);
+        padding-top: 4rem;
+        @include max(768px){
+            padding-top: 2.4375rem;
+        }
+        .logo{
+            z-index: 100;
+            img{
+                @include max(720px){
+                    width: 9.4375rem;
+                }
+            }
+            &:focus{
+                outline: 2px dotted $White;
+                outline-offset: 0.25rem
+            }
+        }
+        &__links{
+            ul{
+                @include flex(row,center,none);
+                margin-top: 9px;    
+            }
+            li{
+                font-family: $Josefin;
+                font-size: 15px;
+                font-weight: 700;
+                letter-spacing: 0.6px;
+                margin-top: 2px;
+                &:not(:last-child){
+                    margin-right: 31.5px;
+                }
+                &:last-child{
+                    margin-right: 0px;
+                }
+                a{
+                    color: $White;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $White;
+                        margin-top: 7px;
+                        transform: scaleX(0);
+                        transition: .3s ease-in-out;   
+                    }
+                    &:hover::after{
+                        width: 100%;
+                        transform: scaleX(1)
+                    }
+                }
+            }
+            @include max(768px){
+                display: none;
+            }
+        }
+    }
+    .headings{
+        position: relative;
+        margin-top: 132px;
+        margin-left: 6px;
+        @include max(768px){
+            margin-top: 161px;
+        }
+        h1{
+            font-size: 4.5rem;
+            font-weight: 300;
+            max-width: 39.9rem;
+            line-height: 0.97;
+            outline: 2.3px solid #fff;
+            outline-offset: 0.35rem;
+            color: #fff;
+            text-transform: uppercase;
+            padding-top: 34px;
+            padding-left: 35px;
+            padding-bottom: 22px;
+            @include max(768px){
+                padding-top: 20px;
+                padding-left: 29px;
+                padding-bottom: 10px;
+                font-size: 3.7rem;
+                max-width: 27rem;
+                padding-left: 25px;
+            }
+            @include max(500px){
+                font-size: 2.5rem;
+                max-width: 19rem;
+            }
+            @include max(376px){
+                font-size: 2.2rem;
+                max-width: 19rem;
+                padding-right: 70px;
+            }
+            @include max(340px){
+                font-size: 1.9rem;
+                max-width: 17rem;
+                padding-right: 70px;
+            }
+        }
+    }   
+}
+
+

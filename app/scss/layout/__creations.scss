@@ -1,0 +1,103 @@
+.creations{
+    padding-top: 156px;
+    padding-bottom: 100px;
+    @include max(768px){
+        padding-top: 0px
+    }
+    &__heading{
+        @include flex(row,center,space-between);
+        @include max(768px){
+            text-align: center;
+            flex-direction: column;
+        }
+        h3{
+            font-size: 3rem;
+            text-transform: uppercase;
+            color: $Black;
+            @include max(768px){
+                font-size: 1.8rem;
+            }
+        }
+        .btn{
+            cursor: pointer;
+            font-family: $Alata;
+            font-weight: 400;
+            font-size: 14.8px;
+            letter-spacing: 4.2px;
+            text-transform: uppercase;
+            background: none;
+            outline: 2.5px solid $DarkGray;
+            padding: 9px 38px;
+            transition: .3s ease-in;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            @include max(768px){
+                display: none;
+            }
+            &:hover{
+                color: #fff;
+                outline: $Black;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background: $Black;
+                z-index: -1;
+                border-radius: 50% 50% 0  0;
+                transition: .5s ease-in-out;
+            }
+            &:hover::before{
+                height: 180%;
+            }
+        }
+    }
+}
+
+.mobile{
+    @include flex(row,center,center);
+    margin-top: 33px; 
+    @include min(769px){
+        display: none;
+    }
+   .btn-mobile{
+       display: flex;
+       justify-content: center;
+       cursor: pointer;
+       font-family: $Alata;
+       font-weight: 400;
+       font-size: 14.8px;
+       letter-spacing: 4.2px;
+       text-transform: uppercase;
+       background: none;
+       outline: 2.5px solid $DarkGray;
+       padding: 9px 38px;
+       transition: .3s ease-in;
+       border: none;
+       position: relative;
+       overflow: hidden;
+       &:hover{
+               color: #fff;
+               outline: $Black;
+        }
+      &::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 0%;
+          background: $Black;
+          z-index: -1;
+          border-radius: 0 0 50%  50%;
+          transition: .5s ease-in-out;
+      }
+       &:hover::before{
+           height: 180%;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+.creations__grid{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    @include max(1180px){
+        grid-template-columns: auto auto;
+    }
+    @include max(680px){
+        margin-top: 55px;
+        grid-template-columns: auto;
+    }
+    .grid{
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 10px;
+        width: 256px;
+        padding: 225.5px 0px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        transition: all 0.7s ease-in-out;
+        @include max(1180px){
+            width: 100%;
+        }
+        @include max(680px){
+            padding: 0px 0px;
+            height: 140px;
+        }
+        @include max(450px){
+            padding: 0px 0px;
+            height: 100px;
+        }
+        @include max(340px){
+            padding: 0px 0px;
+            height: 80px;
+        }
+        
+        &:hover{
+            background-size: 115%;
+            outline: 3px dotted #000;
+            outline-offset: 0rem;
+            h3{
+                color: $Black;
+            }
+        }
+        &::before{
+            content: "";
+            display: block;
+            height: 451px;
+            width: 255.6px;
+            background: linear-gradient( transparent,$Black);
+            opacity: 0.6;
+            position: absolute;
+            top: 0px;
+            @include max(1180px){
+                width: 100%;
+            }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: $White;
+            opacity: 0.5;
+            z-index: 1;
+            transform: scaleX(0);
+            transition: .7s ease-in-out;
+        }
+        &:hover::after{
+            transform: scale(1);
+        }
+        h3{
+            z-index: 100;
+            font-size: 2rem;
+            color: $White;
+            max-width: 10.5rem;
+            text-transform: uppercase;
+            position: absolute;
+            left: 40px;
+            bottom: 33px;
+            transition: all 0.7s ease-in-out;
+            @include max(450px){
+                font-size: 1.6rem;
+                left: 20px;
+                bottom: 15px;
+                max-width: 9rem;
+            }
+        }
+    }
+}
+ 
+    .deep-earth{
+        background: url(/images/desktop/image-deep-earth.jpg);
+        @include max(680px){
+            background: url(/images/mobile/image-deep-earth.jpg);
+        }
+    }
+    .night-arcade{
+        background-image: url(/images/desktop/image-night-arcade.jpg);
+        @include max(680px){
+            background: url(/images/mobile/image-night-arcade.jpg);
+        }
+    }
+    .soccer-team{
+        background-image: url(/images/desktop/image-soccer-team.jpg);
+        @include max(680px){
+            background: url(/images/mobile/image-soccer-team.jpg);
+        }
+    }
+    .the-grid{
+        background-image: url(/images/desktop/image-grid.jpg);
+        @include max(680px){
+            background: url(/images/mobile/image-grid.jpg);
+        }
+    }
+    .above-vr{
+        background-image: url(/images/desktop/image-from-above.jpg);
+        @include max(680px){
+            background: url(/images/mobile/image-from-above.jpg);
+        }
+    }
+    .pocket-borealis{
+        background-image: url(/images/desktop/image-pocket-borealis.jpg);
+        @include max(680px){
+            background: url(/images/mobile/image-pocket-borealis.jpg);
+        }
+    }
+    .the-curiosity{
+        background-image: url(/images/desktop/image-curiosity.jpg);
+        @include max(680px){
+            background: url(/images/mobile/image-curiosity.jpg);
+        }
+    }
+    .make-fisheye{
+        background-image: url(/images/desktop/image-fisheye.jpg);
+        @include max(680px){
+            background: url(/images/mobile/image-fisheye.jpg);
+        }
+    }
